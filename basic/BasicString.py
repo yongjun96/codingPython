@@ -199,10 +199,100 @@ data_strip = data.strip()
 print("strip() -> 좌우의 공백 제거")
 print(data_strip)
 
+print("----------------------------------------------------------")
 
+print("041 upper 메서드")
+print("다음과 같은 문자열이 있을 때 이를 대문자 BTC_KRW로 변경하세요.")
 
+ticker = "btc_krw"
 
+print(ticker.upper())
 
+print("----------------------------------------------------------")
+
+print("042 lower 메서드")
+print("다음과 같은 문자열이 있을 때 이를 소문자 btc_krw로 변경하세요.")
+
+ticker = "BTC_KRW"
+
+print(ticker.lower())
+
+print("----------------------------------------------------------")
+
+print("043 capitalize 메서드")
+print("문자열 'hello'가 있을 때 이를 'Hello'로 변경해보세요.")
+
+string = "hello"
+
+print("capitalize() -> 문자열의 첫글자를 대문자로 변환")
+print(string.capitalize())
+
+print("----------------------------------------------------------")
+
+print("044 endswith 메서드")
+print("파일 이름이 문자열로 저장되어 있을 때 endswith 메서드를 사용해서 파일 이름이 'xlsx'로 끝나는지 확인해보세요.")
+
+file_name = "보고서.xlsx"
+
+print(file_name.endswith("xlsx"))
+
+print("----------------------------------------------------------")
+
+print("045 endswith 메서드")
+print("파일 이름이 문자열로 저장되어 있을 때 endswith 메서드를 사용해서 파일 이름이 'xlsx' 또는 'xls'로 끝나는지 확인해보세요.")
+
+file_name = "보고서.xls"
+
+print(file_name.endswith(("xlsx", "xls")))
+
+print("----------------------------------------------------------")
+
+print("046 startswith 메서드")
+print("파일 이름이 문자열로 저장되어 있을 때 startswith 메서드를 사용해서 파일 이름이 '2020'로 시작하는지 확인해보세요.")
+
+file_name = "2020_보고서.xlsx"
+
+print(file_name.startswith("2020"))
+
+print("----------------------------------------------------------")
+
+print("047 split 메서드")
+print("다음과 같은 문자열이 있을 때 공백을 기준으로 문자열을 나눠보세요.")
+
+a = "hello world"
+
+a_split = a.split(" ")
+print(a)
+
+print("----------------------------------------------------------")
+
+print("048 split 메서드")
+print("다음과 같이 문자열이 있을 때 btc와 krw로 나눠보세요.")
+
+ticker = "btc_krw"
+
+print(ticker.split("_"))
+
+print("----------------------------------------------------------")
+
+print("049 split 메서드")
+print("다음과 같이 날짜를 표현하는 문자열이 있을 때 연도, 월, 일로 나눠보세요.")
+
+date = "2020-05-01"
+
+date_split = date.split("-")
+
+print(f"년: {date_split[0]} 월: {date_split[1]} 일: {date_split[2]}")
+
+print("----------------------------------------------------------")
+
+print("050 rstrip 메서드")
+print("문자열의 오른쪽에 공백이 있을 때 이를 제거해보세요.")
+
+data = "039490     "
+
+print("rstrip() -> 오른쪽에 공백만 제거 / lstrip() -> 왼쪽의 공백만 제거")
+print(data.rstrip())
 
 
 
