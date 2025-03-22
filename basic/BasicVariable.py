@@ -1,4 +1,4 @@
-# 초보자를 위한 파이썬 300제
+# 기초 문자열, 변수 사용
 
 # print 기초
 print("Mary's cosmetics")
@@ -42,6 +42,20 @@ print(num, type(num))
 float_str = "15.79"
 float_str = float(float_str) # float() -> 실수 변환
 print(float_str, type(float_str))
+
+year = "2020"
+int_year = int(year)
+print(int_year + 1)
+print(int_year + 2)
+print(int_year + 3)
+
+# 에이컨이 월 48,584원에 무이자 36개월의 조건으로 홈쇼핑에서 판매되고 있습니다.
+# 총 금액은 계산한 후 이를 화면에 출력해보세요. (변수사용하기)
+
+airCon = 48584
+airConAllPrice = airCon * 36
+print(airConAllPrice)
+
 
 
 
