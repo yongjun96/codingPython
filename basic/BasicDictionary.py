@@ -114,4 +114,118 @@ print("다음 코드에서 에러가 발생한 원인을 설명하라.")
 icecream = {'폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
 # icecream['누가바']
 
-print("누가바는 디셔너리에 없기 때문")
+print("누가바는 딕셔너리에 없기 때문")
+
+print("----------------------------------------------------------")
+
+print("091 딕셔너리 생성")
+print("아래의 표에서, 아이스크림 이름을 키값으로, (가격, 재고) 리스트를 딕셔너리의 값으로 저장하라.\n"
+      " 딕셔너리의 이름은 inventory로 한다.")
+
+inventory = {
+    "메로나": [300, 20],
+    "비비빅": [400, 3],
+    "죠스바": [250, 100]
+}
+
+print(inventory)
+
+print("----------------------------------------------------------")
+
+print("092 딕셔너리 인덱싱")
+print("inventory 딕셔너리에서 메로나의 가격을 화면에 출력하라.")
+
+print(f"메로나의 가격 : {inventory['메로나'][0]}")
+
+print("----------------------------------------------------------")
+
+print("093 딕셔너리 인덱싱")
+print("inventory 딕셔너리에서 메로나의 재고를 화면에 출력하라.")
+
+print(f"메로나의 재고 : {inventory['메로나'][1]}")
+
+print("----------------------------------------------------------")
+
+print("094 딕셔너리 추가")
+print("inventory 딕셔너리에 아래 데이터를 추가하라.")
+
+inventory["월드콘"] = [500, 7]
+
+print(inventory)
+
+print("----------------------------------------------------------")
+
+print("095 딕셔너리 keys() 메서드")
+print("다음의 딕셔너리로부터 key 값으로만 구성된 리스트를 생성하라.")
+
+icecream = {
+    '탱크보이': 1200,
+    '폴라포': 1200,
+    '빵빠레': 1800,
+    '월드콘': 1500,
+    '메로나': 1000
+}
+
+icecream_list = list(icecream.keys())
+
+print(icecream_list, type(icecream_list))
+
+print("----------------------------------------------------------")
+
+print("096 딕셔너리 values() 메서드")
+print("다음의 딕셔너리에서 values 값으로만 구성된 리스트를 생성하라.")
+
+icecream_value_list = list(icecream.values())
+
+print(icecream_value_list)
+
+print("----------------------------------------------------------")
+
+print("097 딕셔너리 values() 메서드")
+print("icecream 딕셔너리에서 아이스크림 판매 금액의 총합을 출력하라.")
+
+icecream_sum_price = sum(icecream.values())
+
+print(icecream_sum_price)
+
+print("----------------------------------------------------------")
+
+print("098 딕셔너리 update 메서드")
+print("아래의 new_product 딕셔너리를 다음 icecream 딕셔너리에 추가하라.")
+
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+new_product = {'팥빙수':2700, '아맛나':1000}
+
+icecream.update(new_product)
+
+print(icecream)
+
+print("----------------------------------------------------------")
+
+print("099 zip과 dict")
+print("아래 두 개의 튜플을 하나의 딕셔너리로 변환하라. \n"
+      " keys를 키로, vals를 값으로 result 이름의 딕셔너리로 저장한다.")
+
+keys = ("apple", "pear", "peach")
+vals = (300, 250, 400)
+
+sum_dict = dict(zip(keys, vals))
+
+print(sum_dict)
+print("dict()은 딕셔너리를 만드는 것 / zip()은 딕셔너리 안에 값들을 저장하는 것")
+
+print("----------------------------------------------------------")
+
+print("100 zip과 dict")
+print("date와 close_price 두 개의 리스트를 close_table 이름의 딕셔너리로 생성하라.")
+
+date = ['09/05', '09/06', '09/07', '09/08', '09/09']
+close_price = [10500, 10300, 10100, 10800, 11000]
+
+close_table = dict(zip(date, close_price))
+
+print(close_table)
+
+
+
+
