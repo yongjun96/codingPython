@@ -219,14 +219,14 @@ print("아래와 같이 fruit 딕셔너리가 정의되어 있다. "
       "사용자가 입력한 값이 딕셔너리 키 (key) 값에 포함되었다면 '정답입니다'를 "
       "아닐 경우 '오답입니다' 출력하라.")
 
-fruit = {"spring" : "strawberry", "sommer" : "tomato", "fall" : "apple"}
-
-User = input("제가 좋아 하는 계절은 : ")
-
-if User in fruit.keys():
-    print("정답입니다.")
-else:
-    print("오답입니다.")
+# fruit = {"spring" : "strawberry", "sommer" : "tomato", "fall" : "apple"}
+#
+# User = input("제가 좋아 하는 계절은 : ")
+#
+# if User in fruit.keys():
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
 
 print("----------------------------------------------------------")
 
@@ -235,10 +235,104 @@ print("아래와 같이 fruit 딕셔너리가 정의되어 있다. "
       "사용자가 입력한 값이 딕셔너리 키 (key) 값에 포함되었다면 '정답입니다'를 "
       "아닐 경우 '오답입니다' 출력하라.")
 
-if User in fruit.values():
-    print("정답입니다")
-else:
-    print("오답입니다.")
+# if User in fruit.values():
+#     print("정답입니다")
+# else:
+#     print("오답입니다.")
+
+print("----------------------------------------------------------")
+
+print("121 type")
+print("사용자로부터 문자 한 개를 입력 받고, "
+      "소문자일 경우 대문자로, 대문자 일 경우, 소문자로 변경해서 출력하라.")
+
+# User = input("영문 한개를 입력 : ")
+#
+# if User.isupper() :
+#     print(User.lower())
+# elif User.islower() :
+#     print(User.upper())
+
+print("----------------------------------------------------------")
+
+print("122 type")
+print("점수 구간에 해당하는 학점이 아래와 같이 정의되어 있다. "
+      "사용자로부터 score를 입력받아 학점을 출력하라.")
+
+# score = input("점수 입력 : ")
+#
+# if 81 <= int(score) <= 100:
+#     print("A")
+# elif 61 <= int(score) <= 80:
+#     print("B")
+# elif 41 <= int(score) <= 60:
+#     print("C")
+# elif 21 <= int(score) <= 40:
+#     print("D")
+# else:
+#     print("E")
+
+print("----------------------------------------------------------")
+
+print("123 type")
+print("사용자로부터 달러, 엔, 유로, 또는 위안 금액을 입력받은 후 "
+      "이를 원으로 변환하는 프로그램을 작성하라. "
+      "각 통화별 환율은 다음과 같다. "
+      "사용자는 100 달러, 1000 엔, 13 유로, 100 위안과 같이 "
+      "금액과 통화명 사이에 공백을 넣어 입력한다고 가정한다.")
+
+# exchange_rate = {"$": 1167, "yen": 1.096, "euros": 1268, "yuan": 171}
+#
+# User = input("금액 입력 : ")
+#
+# num, exchange = User.split("-")
+#
+# print(float(num) * exchange_rate[exchange], "원")
+
+print("----------------------------------------------------------")
+
+print("124 type")
+print("사용자로부터 세 개의 숫자를 입력 받은 후 가장 큰 숫자를 출력하라.")
+
+# num1 = input("숫자1 입력 : ")
+# num2 = input("숫자2 입력 : ")
+# num3 = input("숫자3 입력 : ")
+#
+# nums = [int(num1), int(num2), int(num3)]
+#
+# print(max(nums))
+#
+# if num1 >= num2 and num1 >= num3:
+#     print(num1)
+# elif num2 >= num1 and num2 >= num3:
+#     print(num2)
+# else:
+#     print(num3)
+
+print("----------------------------------------------------------")
+
+print("125 type")
+print("휴대폰 번호 앞자리에 따라 통신사는 아래와 같이 구분된다. "
+      "사용자로부터 휴대전화 번호를 입력 받고, 통신사를 출력하는 프로그램을 작성하라.")
+
+tel = {"011": "SKT", "016": "KT", "019": "LGU", "010": "알수없음"}
+
+User = input("전화번호 입력 : ")
+
+num1, num2, num3 = User.split("-")
+
+if num1 in tel.keys():
+    print("당신은", tel[num1], "사용자입니다.")
+
+
+
+
+
+
+
+
+
+
 
 
 
