@@ -725,7 +725,7 @@ print("-----")
 
 print("----------------------------------------------------------")
 
-print("191 이차원 리스트 반복문 들여 쓰기")
+print("191 이차원 리스트 반복문")
 print("data에는 매수한 종목들의 OHLC (open/high/low/close) 가격 정보가 바인딩 되어있다.")
 
 data = [
@@ -737,3 +737,57 @@ data = [
 for row in data:
     for col in row:
         print(col * 1.00014)
+
+print("----------------------------------------------------------")
+
+print("192 이차원 리스트 반복문")
+print("191번의 출력 결과에 행단위로 '----' 구분자를 추가하라.")
+
+for row in data:
+    for col in row:
+        print(col * 1.00014)
+    print("-----")
+
+print("----------------------------------------------------------")
+
+print("193 이차원 리스트 반복문")
+print("192 번 문제의 결괏값을 result 이름의 리스트에 1차원 배열로 저장하라.")
+
+result = []
+for row in data:
+    for col in row:
+        result.append(col * 1.00014)
+print(result)
+
+print("----------------------------------------------------------")
+
+print("194 이차원 리스트 반복문")
+print("191번 문제의 결괏값을 result 이름의 리스트에 2차원 배열로 저장하라. "
+      "저장 포맷은 아래와 같다. 각 행에 대한 데이터끼리 리스트에 저장되어야 한다.")
+
+result = []
+for row in data:
+    sub = []
+    for col in row:
+        sub.append(col * 1.00014)
+    result.append(sub)
+print(result)
+
+print("----------------------------------------------------------")
+
+print("195 이차원 리스트 반복문")
+print("ohlc 리스트에는 시가(open), 고가 (high), 저가 (low) , 종가(close)가"
+      " 날짜별로 저장돼 있다. 화면에 종가데이터를 출력하라.")
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+
+# for i in range(len(ohlc)):
+#     if ohlc[0][i] == "close":
+#         for j in range(1, len(ohlc)):
+#             print(ohlc[j][i])
+
+for row in ohlc[1:]:
+    print(row[3])
