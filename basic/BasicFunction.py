@@ -1,3 +1,5 @@
+import time
+
 print("201 함수")
 
 print("'비트코인' 문자열을 화면에 출력하는 print_coin() 함수를 정의하라.")
@@ -245,6 +247,159 @@ def print_max(a, b, c):
 
 print_max(10, 8, 74)
 
+print("----------------------------------------------------------")
+
+print("221 함수")
+print("입력된 문자열을 역순으로 출력하는 print_reverse 함수를 정의하라.")
+
+def print_reverse(str):
+    print(str[::-1])
+
+print_reverse("python")
+
+print("----------------------------------------------------------")
+
+print("222 함수")
+print("성적 리스트를 입력 받아 평균을 출력하는 print_score 함수를 정의하라.")
+
+# def print_score(list):
+#     sum = 0
+#     for num in list:
+#         sum += num
+#     print(sum / len(list))
+
+def print_score(score_list) :
+    print(sum(score_list)/len(score_list))
+
+print_score ([1, 2, 3])
+
+print("----------------------------------------------------------")
+
+print("223 함수")
+print("하나의 리스트를 입력받아 짝수만 화면에 출력하는 print_even 함수를 정의하라.")
+
+def print_even(list):
+    for num in list:
+        if num % 2 == 0:
+            print(num)
+
+print_even ([1, 3, 2, 10, 12, 11, 15])
+
+print("----------------------------------------------------------")
+
+print("224 함수")
+print("하나의 딕셔너리를 입력받아 딕셔너리의 key 값을 화면에 출력하는 print_keys 함수를 정의하라.")
+
+def print_keys(dic):
+    for key in dic.keys():
+        print(key)
+
+print_keys ({"이름":"김말똥", "나이":30, "성별":0})
+
+print("----------------------------------------------------------")
+
+print("225 함수")
+print("my_dict에는 날짜를 키값으로 OHLC가 리스트로 저장돼 있다.")
+
+my_dict = {"10/26" : [100, 130, 100, 100],
+           "10/27" : [10, 12, 10, 11]}
+
+print("my_dict와 날짜 키값을 입력받아 OHLC 리스트를 출력하는 print_value_by_key 함수를 정의하라.")
+
+# def print_value_by_key(dic, date):
+#     for key in dic.keys():
+#         if key == date:
+#             for val in dic[key]:
+#                 print(val)
+
+def print_value_by_key(dic, date):
+    print(dic[date])
+
+print_value_by_key(my_dict, "10/26")
+
+print("----------------------------------------------------------")
+
+print("226 함수")
+print("입력 문자열을 한 줄에 다섯글자씩 출력하는 print_5xn(string) 함수를 작성하라.")
+
+start = time.time()
+
+# 실행 시간: 0.273265초 (100000개 기준)
+# def print_5xn(str):
+#     str_save = ""
+#     for i in range(int(len(str))):
+#         str_save += str[i]
+#         if (i+1) % 5 == 0:
+#             print(str_save)
+#             str_save = ""
+
+
+# 실행 시간: 0.216017초 (100000개 기준)
+# def print_5xn(str):
+#     split_num = int(len(str)) / 5
+#     for i in range(int(split_num)):
+#         print(str[i * 5 : i * 5 + 5])
+
+# 실행 시간: 0.206974초 (100000개 기준)
+def print_5xn(s):
+    for i in range(0, len(s), 5):
+        print(s[i:i+5])
+
+print_5xn("아이엠어보이유알어걸" * 100000)
+
+end = time.time()
+
+print(f"실행 시간: {end - start:.6f}초")
+
+print("----------------------------------------------------------")
+
+print("227 함수")
+print("문자열과 한줄에 출력될 글자 수를 입력을 받아 "
+      "한 줄에 입력된 글자 수만큼 출력하는 print_mxn(string) 함수를 작성하라.")
+
+def printmxn(str, count):
+    for i in range(0, len(str), count):
+        print(str[i:i+count])
+
+printmxn("아이엠어보이유알어걸", 3)
+
+print("----------------------------------------------------------")
+
+print("228 함수")
+print("연봉을 입력받아 월급을 계산하는 calc_monthly_salary(annual_salary) "
+      "함수를 정의하라. 회사는 연봉을 12개월로 나누어 분할 지급하며, 이 때 1원 미만은 버림한다.")
+
+def calc_monthly_salary(annual_salary):
+    num = int(annual_salary / 12)
+    return num
+
+print(calc_monthly_salary(12000000))
+
+print("----------------------------------------------------------")
+
+print("229 함수 바인딩")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def my_print (a, b) :
+    print("왼쪽:", a)
+    print("오른쪽:", b)
+
+my_print(a=100, b=200)
+
+print("예측 : 왼쪽: 100 오른쪽: 200")
+
+print("----------------------------------------------------------")
+
+print("230 함수 바인딩")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def my_print (a, b) :
+    print("왼쪽:", a)
+    print("오른쪽:", b)
+
+my_print(b=100, a=200)
+
+print("예측 : 왼쪽: 200 오른쪽: 100")
 
 
 
