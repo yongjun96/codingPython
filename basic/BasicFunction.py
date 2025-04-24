@@ -1,4 +1,5 @@
 import time
+from pickle import PROTO
 
 print("201 함수")
 
@@ -400,6 +401,58 @@ def my_print (a, b) :
 my_print(b=100, a=200)
 
 print("예측 : 왼쪽: 200 오른쪽: 100")
+
+print("----------------------------------------------------------")
+
+print("231 함수")
+print("아래 코드를 실행한 결과를 예상하라.")
+
+# def n_plus_1 (n) :
+#     result = n + 1
+#
+# n_plus_1(3)
+# print (result)
+
+print("예측 : 변수가 함수 안에 선언되어 에러 발생")
+
+print("----------------------------------------------------------")
+
+print("232 함수")
+print("문자열 하나를 입력받아 인터넷 주소를 반환하는 make_url 함수를 정의하라.")
+
+def make_url(str):
+    return "www."+str+".com"
+
+print(make_url("naver"))
+
+print("----------------------------------------------------------")
+
+print("233 함수")
+print("문자열을 입력받아 각 문자들로 구성된 리스트로 반환하는 make_list 함수를 정의하라.")
+
+def make_list(str):
+    list = []
+    for i in range(len(str)):
+        list.append(str[i])
+    return list
+
+print(make_list("abcd"))
+
+print("----------------------------------------------------------")
+
+print("234 함수")
+print("숫자로 구성된 하나의 리스트를 입력받아, "
+      "짝수들을 추출하여 리스트로 반환하는 pickup_even 함수를 구현하라.")
+
+def pickup_even(list):
+    my_list = []
+    for i in range(len(list)):
+        if list[i] % 2 == 0:
+            my_list.append(list[i])
+    return my_list
+
+print(pickup_even([3, 4, 5, 6, 7, 8]))
+
 
 
 
