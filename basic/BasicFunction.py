@@ -453,6 +453,96 @@ def pickup_even(list):
 
 print(pickup_even([3, 4, 5, 6, 7, 8]))
 
+print("----------------------------------------------------------")
+
+print("235 함수")
+print("콤마가 포함된 문자열 숫자를 입력받아 정수로 변환하는 convert_int 함수를 정의하라.")
+
+def convert_int(str):
+    replace_str = str.replace(",", "")
+    return int(replace_str)
 
 
+print(convert_int("1,234,567"))
 
+print("----------------------------------------------------------")
+
+print("236 함수")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def 함수(num) :
+    return num + 4
+
+a = 함수(10)
+b = 함수(a)
+c = 함수(b)
+print(c)
+
+print("예측 : 22")
+
+print("----------------------------------------------------------")
+
+print("237 함수")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def 함수(num) :
+    return num + 4
+
+c = 함수(함수(함수(10)))
+print(c)
+
+print("예측 : 22")
+
+print("----------------------------------------------------------")
+
+print("238 함수")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def 함수1(num) :
+    return num + 4
+
+def 함수2(num) :
+    return num * 10
+
+a = 함수1(10)
+c = 함수2(a)
+print(c)
+
+print("예측 : 140")
+
+print("----------------------------------------------------------")
+
+print("239 함수")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def 함수1(num) :
+    return num + 4
+
+def 함수2(num) :
+    num = num + 2
+    return 함수1(num)
+
+c = 함수2(10)
+print(c)
+
+print("예측 : 16")
+
+print("----------------------------------------------------------")
+
+print("240 함수")
+print("아래 코드의 실행 결과를 예측하라.")
+
+def 함수0(num) :
+    return num * 2
+
+def 함수1(num) :
+    return 함수0(num + 2)
+
+def 함수2(num) :
+    num = num + 10
+    return 함수1(num)
+
+c = 함수2(2)
+print(c)
+
+print("예측 : 28")
