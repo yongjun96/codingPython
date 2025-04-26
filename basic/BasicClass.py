@@ -128,9 +128,9 @@ print("----------------------------------------------------------")
 print("260 에러의 원인")
 print("아래와 같은 에러가 발생한 원인에 대해 설명하세요.")
 
-class OMG :
-    def print(self):
-        print("Oh my god")
+# class OMG :
+#     def print():
+#         print("Oh my god")
 
 print("함수명에 print()를 사용하고 함수 내용으로 print를 다시 호출하고 있음")
 
