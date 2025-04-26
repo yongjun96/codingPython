@@ -482,3 +482,68 @@ kim.withdraw(132455)
 print("입금 내역 : ", kim.deposit_history)
 print("출금 내역 : ", kim.withdraw_history)
 
+print("----------------------------------------------------------")
+
+print("281 클래스 정의")
+print("다음 코드가 동작하도록 차 클래스를 정의하세요.")
+print(
+    ">> car = 차(2, 1000)",
+    ">> car.바퀴",
+    "2",
+    ">> car.가격",
+    "1000"
+)
+
+class Car:
+    def __init__(self, wheel, price):
+        self.wheel = wheel
+        self.price = price
+
+    def get_wheel(self):
+        print(self.wheel)
+
+    def get_price(self):
+        print(self.price)
+
+car = Car(4, 100000)
+car.get_wheel()
+car.get_price()
+
+print("----------------------------------------------------------")
+
+print("282 클래스 상속")
+print("차 클래스를 상속받은 자전차 클래스를 정의하세요.")
+
+class Bicycle(Car):
+    def __init__(self, wheel, price, drivetrain):
+        super().__init__(wheel, price)
+        self.wheel = wheel
+        self.price = price
+        self.drivetrain = drivetrain
+
+    def get_drivetrain(self):
+        print(self.drivetrain)
+
+print("----------------------------------------------------------")
+
+print("283 클래스 상속")
+print("다음 코드가 동작하도록 자전차 클래스를 정의하세요. "
+      "단 자전차 클래스는 차 클래스를 상속받습니다.")
+
+# bicycle = Bicycle(2, 1000)
+# bicycle.get_wheel()
+# bicycle.get_price()
+
+print("----------------------------------------------------------")
+
+print("284 클래스 상속")
+print("다음 코드가 동작하도록 자전차 클래스를 정의하세요. "
+      "단 자전차 클래스는 차 클래스를 상속받습니다.")
+print(
+    ">> bicycle = 자전차(2, 100, \"시마노\")",
+    ">> bicycle.구동계",
+    "시마노"
+)
+
+bicycle = Bicycle(2, 100, "시마노")
+bicycle.get_drivetrain()
