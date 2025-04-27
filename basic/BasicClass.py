@@ -505,6 +505,7 @@ class Car:
     def get_price(self):
         print(self.price)
 
+
 car = Car(4, 100000)
 car.get_wheel()
 car.get_price()
@@ -517,12 +518,13 @@ print("차 클래스를 상속받은 자전차 클래스를 정의하세요.")
 class Bicycle(Car):
     def __init__(self, wheel, price, drivetrain):
         super().__init__(wheel, price)
-        self.wheel = wheel
-        self.price = price
         self.drivetrain = drivetrain
 
     def get_drivetrain(self):
         print(self.drivetrain)
+
+    def get_info(self):
+        print(self.wheel, self.price, self.drivetrain)
 
 print("----------------------------------------------------------")
 
@@ -547,3 +549,96 @@ print(
 
 bicycle = Bicycle(2, 100, "시마노")
 bicycle.get_drivetrain()
+
+print("----------------------------------------------------------")
+
+print("285 클래스 상속")
+print("다음 코드가 동작하도록 차 클래스를 상속받는 자동차 클래스를 정의하세요.")
+
+print(
+    ">> car = 자동차(4, 1000)",
+    " >> car.정보()",
+    "바퀴수 4",
+    "가격 1000"
+)
+
+class Automobile(Car):
+    def __init__(self, wheel, price):
+        super().__init__(wheel, price)
+
+    def info(self):
+        print(self.wheel, self.price)
+
+car = Automobile(2, 1000)
+car.info()
+
+print("----------------------------------------------------------")
+
+print("286 부모 클래스 생성자 호출")
+print("다음 코드가 동작하도록 차 클래스를 수정하세요.")
+
+bicycle = Bicycle(2, 100, "시마노")
+bicycle.get_price()
+bicycle.get_wheel()
+
+
+print("----------------------------------------------------------")
+
+print("287 부모 클래스 메서드 호출")
+print("자전차의 정보() 메서드로 구동계 정보까지 출력하도록 수정해보세요.")
+
+bicycle.get_info()
+
+print("----------------------------------------------------------")
+
+print("288 메서드 오버라이딩")
+print("다음 코드의 실행 결과를 예상해보세요.")
+
+class parents:
+    def get(self):
+        print("부모호출")
+
+class child(parents):
+    def get(self):
+        print("자식호출")
+
+me = child()
+me.get()
+
+print("예상 : 자식호출")
+
+print("----------------------------------------------------------")
+
+print("289 생성자")
+print("다음 코드의 실행 결과를 예상해보세요.")
+
+class parents:
+    def __init__(self):
+        print("부모생성")
+
+class child(parents):
+    def __init__(self):
+        print("자식생성")
+
+me = child()
+
+print("예상 : 자식생성")
+
+print("----------------------------------------------------------")
+
+print("290 부모클래스 생성자 호출")
+print("다음 코드의 실행 결과를 예상해보세요.")
+
+class parents:
+    def __init__(self):
+        print("부모생성")
+
+class child(parents):
+    def __init__(self):
+        print("자식생성")
+        super().__init__()
+
+me = child()
+
+print("예상 : 자식생성 부모생성")
+
