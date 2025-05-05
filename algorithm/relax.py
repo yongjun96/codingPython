@@ -56,3 +56,30 @@ result = find_max_occurred_alphabet
 print("정답 = i 현재 풀이 값 =", result("hello my name is dingcodingco"))
 print("정답 = e 현재 풀이 값 =", result("we love algorithm"))
 print("정답 = b 현재 풀이 값 =", result("best of best youtube"))
+
+print("--------------------- 배열에서 특정 요소 찾기 -----------------------")
+# Q. 다음과 같은 숫자로 이루어진 배열이 있을 때, 이 배열 내에 특정 숫자가 존재한다면 True, 존재하지 않다면 False 를 반환하시오.
+
+# 빅오 -> 최악
+# 빅오메가 -> 최선
+def is_number_exist(number, array):
+    for num in array:
+        if number == num:
+            return True
+    return False
+
+result = is_number_exist
+# 운이 좋은 경우, 3이 첫번째의 있기 때문에 시간복잡도가 1임!!
+print("정답 = True 현재 풀이 값 =", result(3, [3,5,6,1,2,4]))
+# 운이 좋지 않은 경우, 7은 찾을 수 없기 때문에 끝까지 돌아서 3임
+print("정답 = Flase 현재 풀이 값 =", result(7, [6,6,6]))
+print("정답 = True 현재 풀이 값 =", result(2, [6,9,2,7,1888]))
+
+# 알고리즘은 같은 코드여도 항상 동일한 성능이 아니다.
+# 빅오의 연산 -> N
+# 빅 오메가의 연산 -> 1
+
+# 알고리즘은 대부분의 경우 빅오로 분석하는 경우가 많다
+# 항상 최악의 경우를 대비해야 하기 때문
+
+# 공간 복잡도 보다는 사간 복잡도를 줄리게 효율적
