@@ -36,12 +36,18 @@ print("정답 = 3 현재 풀이 값 =", result([0,0,0,1,2]))
 print("Q. 다음과 같이 영어로 되어 있는 문자열이 있을 때, "
       "이 문자열에서 반복되지 않는 첫번째 문자를 반환하시오. 만약 그런 문자가 없다면 _ 를 반환하시오.")
 
-def find_max_plus_or_multiply(array):
-    # 이 부분을 채워보세요!
-    return 1
+def find_not_repeating_first_character(string):
+    for str in string:
+        match = 0
+        for str2 in string:
+            if str == str2:
+                match += 1
+        if match == 1:
+            return str
+    return "_"
 
 
-result = find_max_plus_or_multiply
-print("정답 = 728 현재 풀이 값 =", result([0,3,5,6,1,2,4]))
-print("정답 = 8820 현재 풀이 값 =", result([3,2,1,5,9,7,4]))
-print("정답 = 270 현재 풀이 값 =", result([1,1,1,3,3,2,5]))
+result = find_not_repeating_first_character
+print("정답 = d 현재 풀이 값 =", result("abadabac"))
+print("정답 = c 현재 풀이 값 =", result("aabbcddd"))
+print("정답 =_ 현재 풀이 값 =", result("aaaaaaaa"))
