@@ -1,4 +1,5 @@
-# 시간 복잡도 & 공간 복잡도
+# 시간 복잡도
+# 입력 값에 비해 얼마나 일을 수행해야 하는 가
 
 # 점근 표기법 (asymptotic notation)
 # - 어떤 함수의 가 양상을 다른 함수와의 비교로 표 (수론 & 해석학)
@@ -32,37 +33,19 @@ print("정답 = 8820 현재 풀이 값 =", result([3,2,1,5,9,7,4]))
 print("정답 = 270 현재 풀이 값 =", result([1,1,1,3,3,2,5]))
 print("정답 = 3 현재 풀이 값 =", result([0,0,0,1,2]))
 
-
 print("Q. 다음과 같이 영어로 되어 있는 문자열이 있을 때, "
       "이 문자열에서 반복되지 않는 첫번째 문자를 반환하시오. 만약 그런 문자가 없다면 _ 를 반환하시오.")
 
-# 빅오 표기법 : O(N^2)
-# 비효율적
-# - 이런 경우 공간 복잡도를 사용해서 시간복잡도를 줄여야 함
-# def find_not_repeating_first_character(string):
-#     for str in string:
-#         match = 0
-#         for str2 in string:
-#             if str == str2:
-#                 match += 1
-#         if match == 1:
-#             return str
-#     return "_"
-
-# 빅오 표기법 : O(N)
-# 효율적
-# - 공간 복잡도를 이용해서 시간 복잡도의 제곱을 사용하지 않고 해결
 def find_not_repeating_first_character(string):
-    english_list = [0] * 26
     for str in string:
-        index = ord(str) - int(ord('a'))
-        english_list[index] += 1
-
-    for str in string:
-        english_index = ord(str) - ord('a')
-        if english_list[english_index] == 1:
+        match = 0
+        for str2 in string:
+            if str == str2:
+                match += 1
+        if match == 1:
             return str
     return "_"
+
 
 result = find_not_repeating_first_character
 print("정답 = d 현재 풀이 값 =", result("abadabac"))
