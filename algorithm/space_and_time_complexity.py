@@ -32,6 +32,7 @@ print("정답 = 8820 현재 풀이 값 =", result([3,2,1,5,9,7,4]))
 print("정답 = 270 현재 풀이 값 =", result([1,1,1,3,3,2,5]))
 print("정답 = 3 현재 풀이 값 =", result([0,0,0,1,2]))
 
+print("----------------------------------------------------------------")
 
 print("Q. 다음과 같이 영어로 되어 있는 문자열이 있을 때, "
       "이 문자열에서 반복되지 않는 첫번째 문자를 반환하시오. 만약 그런 문자가 없다면 _ 를 반환하시오.")
@@ -68,3 +69,43 @@ result = find_not_repeating_first_character
 print("정답 = d 현재 풀이 값 =", result("abadabac"))
 print("정답 = c 현재 풀이 값 =", result("aabbcddd"))
 print("정답 =_ 현재 풀이 값 =", result("aaaaaaaa"))
+
+print("----------------------------------------------------------------")
+
+print("Q. 정수를 입력 했을 때, 그 정수 이하의 소수를 모두 반환하시오."
+      "소수는 자신보다 작은 두 개의 자연수를 곱하여 만들 수 없는 1보다 큰 자연수이다.")
+
+input = 20
+
+def find_prime_list_under_number(number):
+    number_list = [2, 3]
+    for num in range(4, number):
+        if num % 3 != 0 and num % 2 != 0:
+            number_list.append(num)
+    return number_list
+
+result = find_prime_list_under_number(input)
+print("정답 : [2, 3, 5, 7, 11, 13, 17, 19] / 답 :", result)
+
+print("소수는 2와 3을 포함하고 2와 3으로 나누었을 때 나머지가 남는 수의 집합")
+
+print("----------------------------------------------------------------")
+
+print("Q. 0과 1로만 이루어진 문자열이 주어졌을 때, 이 문자열에 있는 모든 숫자를 전부 같게 만들려고 한다. "
+      "할 수 있는 행동은 문자열에서 연속된 하나 이상의 숫자를 잡고 모두 뒤집는 것이다. 뒤집는 것은 1을 0으로, 0을 1로 바꾸는 것을 의미한다."
+      "예를 들어 S=0001100 일 때, 전체를 뒤집으면 1110011이 된다."
+      "4번째 문자부터 5번째 문자까지 뒤집으면 1111111이 되어서 2번 만에 모두 같은 숫자로 만들 수 있다."
+      "하지만, 처음부터 4번째 문자부터 5번째 문자까지 문자를 뒤집으면 한 번에 0000000이 되어서 1번 만에 모두 같은 숫자로 만들 수 있다."
+      "주어진 문자열을 모두 0 혹은 모두 1로 같게 만드는 최소 횟수를 반환하시오.")
+
+input = "011110"
+input = "01101010110"
+
+
+def find_count_to_turn_out_to_all_zero_or_all_one(string):
+
+    return 1
+
+
+result = find_count_to_turn_out_to_all_zero_or_all_one(input)
+print(result)
