@@ -78,9 +78,11 @@ print("Q. 정수를 입력 했을 때, 그 정수 이하의 소수를 모두 반
 input = 20
 
 def find_prime_list_under_number(number):
-    number_list = [2, 3]
-    for num in range(4, number):
-        if num % 3 != 0 and num % 2 != 0:
+    number_list = []
+    for num in range(2, number+1):
+        if num <= 3:
+            number_list.append(num)
+        elif num % 3 != 0 and num % 2 != 0:
             number_list.append(num)
     return number_list
 
